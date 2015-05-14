@@ -1,1 +1,266 @@
-// Normally mainpage styles
+body
+	height: 100%
+.out
+	max-width: 1024px
+	min-width: 768px 
+	margin: 0 auto
+	+clr
+	height: 100%
+.sidebar, .main
+	height: 100%
+	overflow: auto
+.sidebar
+	width: 34%
+	float: left
+	background: rgba(218, 218, 218, 0.5) 
+	+box
+	+r1
+		width: 33.3%
+	&__top
+		+clr
+		+opacity(0.8)
+		padding: 16px 32px 8px 
+		+r1
+			padding: 16px 16px 8px 
+	&__logo
+		display: inline-block
+		vertical-align: top
+		font-size: 0
+	&__social
+		float: right
+		font-size: 0
+		li
+			display: inline-block
+			vertical-align: middle
+			margin-left: 20px
+			a
+				display: inline-block
+				&.is-fb
+					+s(fb)
+				&.is-tw
+					+s(tw)
+	&__link
+		display: block
+		border-bottom: 1px solid #dadada 
+		padding: 7px 32px 20px
+		margin: 0 0 9px 
+		+r1
+			padding: 7px 16px 12px 
+		p
+			width: 99%
+		h4
+			padding: 4px 0 16px
+			+r1
+				padding-bottom: 10px
+	&__img
+		position: relative
+		overflow: hidden
+		font-size: 0
+		+box-shadow(0 1px 3px rgba(0, 0, 0, 0.4))
+		margin-bottom: 16px
+		+r1
+			margin-bottom: 11px
+		&:before
+			content: ""
+			position: absolute
+			top: -55px
+			left: -25px
+			+s(img-sticker)
+		img
+			width: 100%
+			
+.main
+	width: 66%
+	background: #fff
+	+box
+	float: left
+	padding: 0 16px
+	+r1
+		width: 66.7%
+		
+.nav
+	font-size: 0
+	text-align: center
+	border-bottom: 1px solid #dadada 
+	li
+		display: inline-block
+		vertical-align: top
+		padding: 0 2px 
+		+r1
+			padding: 0 1px 
+	a
+		font-size: 14px
+		color: #494949
+		text-transform: uppercase
+		padding: 19px 8px 20px
+		display: block
+		+r1
+			font-size: 12px
+			padding: 18px 6px 19px 
+		&:hover, &.is-active 
+			color: #47c2c7
+			text-decoration: underline 
+			
+.logos
+	padding: 10px 45px
+	+clr
+	font-size: 0
+	border-bottom: 1px solid #dadada 
+	+r1
+		padding: 10px
+	.logo
+		display: inline-block
+		vertical-align: top
+		margin: 19px 0 0
+	&__list
+		float: right
+		li
+			display: inline-block
+			vertical-align: top
+			margin-left: 10px
+			
+.lead
+	text-align: center
+	padding: 16px 0 15px 
+	border-bottom: 1px solid #dadada 
+	h3
+		max-width: 540px
+		margin: 0 auto
+		
+.row
+	+clr
+	margin: 0 -10px 
+	+r1
+		margin: 0
+.col
+	float: left
+	width: 33.3%
+	+box
+	padding: 20px 10px 
+	position: relative
+	+r1
+		width: 100%
+	&:after
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		content: "" 
+		display: none
+		background: url(../img/col-shadow.png) no-repeat center top
+		-webkit-background-size: cover
+		-o-background-size: cover
+		background-size: cover
+		height: 6px
+		+r1
+			display: block
+	&.is-left, &.is-right
+		.col__info
+			overflow: hidden
+	&.is-left
+		.col__icon
+			+r1
+				float: left
+				margin-right: 15px
+	&.is-right
+		.col__icon
+			+r1
+				float: right
+				margin-left: 15px
+	&__icon
+		position: relative
+		width: 120px
+		height: 120px
+		margin: 0 auto 22px 
+		&:before
+			position: absolute
+			top: 4px
+			left: 0
+			bottom: -4px
+			right: 0
+			content: "" 
+			+border-radius(24px)
+		&-in			
+			width: 120px
+			height: 120px
+			+vertical
+			+border-radius(24px)
+			position: relative
+			z-index: 1 
+		&.is-orange
+			.col__icon-in
+				background-color: #FAA547
+			&:before
+				background-color: #FF8703
+		&.is-green
+			.col__icon-in
+				background-color: #5CB761
+			&:before
+				background-color: #359E3B
+		&.is-pink
+			.col__icon-in
+				background-color: #F55098
+			&:before
+				background-color: #DC2273
+		i
+			display: inline-block
+			vertical-align: middle
+			&.is-desk
+				+s(desk)
+			&.is-like
+				+s(like)
+			&.is-medal
+				+s(medal)
+	p, b
+		color: #494949
+		display: inline
+	p
+		font-size: 14px
+	b
+		font-size: 16px
+		font-weight: bold
+		
+.banner
+	max-width: 460px
+	width: 100%
+	margin: 0 auto 20px
+	position: relative
+	+r1
+		margin: 40px auto 35px 
+	&__slide
+		+cover
+		background-repeat: no-repeat
+		padding: 22px 30px 
+		+border-radius(24px)
+		overflow: hidden
+		position: relative
+		+box-shadow(0 1px 3px rgba(0, 0, 0, 0.4))
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: url(../img/banner-shadow.png) repeat-x
+			+cover
+			background-position: center bottom 
+	p
+		position: relative
+		z-index: 1 
+		font-size: 16px
+		color: #fff
+		+text-shadow(0 1px 0 rgba(0, 0, 0, 0.5)) 
+	&__prev, &__next
+		position: absolute
+		top: 50px
+		margin-top: -12px
+		z-index: 200 
+		&:active
+			margin-top: -11px
+	&__prev
+		left: -15px
+		+s(arr-prev)
+	&__next
+		right: -15px
+		+s(arr-next)

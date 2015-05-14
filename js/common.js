@@ -15,5 +15,7 @@ head.ready(function() {
 	//     scrollFixedElements()
 	// });
 
-	console.log($('body').html());
+	// console.log($('body').html());
+
+	$('.js-slick').slick();
 });
