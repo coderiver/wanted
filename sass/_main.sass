@@ -570,10 +570,23 @@ body
 		margin: 3px 0 0 10px
 		+s(close) 
 	&__social
+		margin-bottom: 10px
+		font-size: 0
+		ul
+			+r1
+				text-align: justify
+				max-width: 480px
+			&:after
+				content: "" 
+				width: 100%
+				+r1
+					display: inline-block
 		li
 			display: inline-block
 			vertical-align: top
 			margin: 0 13px 0 0 
+			+r1
+				margin: 0 
 		a
 			display: block
 			&.is-fb
@@ -589,8 +602,6 @@ body
 	&__quote
 		font-style: italic
 		margin-bottom: 15px
-	&__social
-		margin-bottom: 10px
 	&__info
 		border-top: 1px solid #dadada
 	&__title
@@ -706,6 +717,7 @@ body
 .heading
 	overflow: hidden
 	padding: 0 0 17px 
+	width: 80%
 	&__icon
 		width: 60px
 		height: 60px

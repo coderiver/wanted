@@ -296,7 +296,12 @@ body { height: 100%; }
 
 .project { padding: 17px 0; }
 .project__close { float: right; margin: 3px 0 0 10px; background: url('../img/icons-s193ea773a5.png') 0 -104px no-repeat; width: 16px; height: 16px; }
+.project__social { margin-bottom: 10px; font-size: 0; }
+@media only screen and (max-width: 1020px) { .project__social ul { text-align: justify; max-width: 480px; } }
+.project__social ul:after { content: ""; width: 100%; }
+@media only screen and (max-width: 1020px) { .project__social ul:after { display: inline-block; } }
 .project__social li { display: inline-block; vertical-align: top; margin: 0 13px 0 0; }
+@media only screen and (max-width: 1020px) { .project__social li { margin: 0; } }
 .project__social a { display: block; }
 .project__social a.is-fb { background: url('../img/icons-s193ea773a5.png') 0 -844px no-repeat; width: 108px; height: 30px; }
 .project__social a.is-tw { background: url('../img/icons-s193ea773a5.png') 0 -924px no-repeat; width: 97px; height: 30px; }
@@ -304,7 +309,6 @@ body { height: 100%; }
 .project__social a.is-pocket { background: url('../img/icons-s193ea773a5.png') 0 -884px no-repeat; width: 110px; height: 30px; }
 .project .heading { margin-top: 2px; }
 .project__quote { font-style: italic; margin-bottom: 15px; }
-.project__social { margin-bottom: 10px; }
 .project__info { border-top: 1px solid #dadada; }
 .project__title { font-size: 18px; font-weight: bold; margin-bottom: 15px; display: block; }
 .project .rating { float: right; }
@@ -341,7 +345,7 @@ body { height: 100%; }
 .rating__popup table { font-size: 14px; line-height: 20px; }
 .rating__popup table span { color: #5c6bc0; font-weight: bold; }
 
-.heading { overflow: hidden; padding: 0 0 17px; }
+.heading { overflow: hidden; padding: 0 0 17px; width: 80%; }
 .heading__icon { width: 60px; height: 60px; text-align: center; font-size: 0; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; float: left; margin: 0 20px 0 0; }
 .heading__icon:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .heading__icon.is-purple { background: #5c6bc0; }
