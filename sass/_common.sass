@@ -110,3 +110,59 @@ p
 		background: #47c2c7
 	&:active
 		top: 1px
+		
+.select
+	position: relative
+	cursor: pointer
+	font-size: 14px
+	color: #494949
+	select
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+	&.is-active
+		.select__text
+			+border-radius(4px 4px 0 0)
+.select__text
+	position: relative
+	display: block
+	padding: 0 28px 0 10px 
+	height: 30px
+	z-index: 2 
+	line-height: 30px
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	background-color: #FFF
+	border: 1px solid #DADADA
+	+border-radius(4px)
+	&:after
+		content: ""
+		position: absolute
+		right: 10px
+		top: 50%
+		margin-top: -2px
+		+arr(8, 4, #494949, b)
+.select__list
+	position: absolute
+	display: none
+	left: 0
+	right: 0
+	top: 100%
+	z-index: 200
+	max-height: 200px
+	overflow-x: hidden
+	overflow-y: auto
+	background-color: #FFF
+	border: 1px solid #DADADA
+	border-top: 0 
+	+border-radius(0 0 4px 4px)
+	li
+		padding: 5px 10px 
+		cursor: pointer
+		line-height: 1
+		&:hover
+			background: #717791
+			color: #fff 
