@@ -66,7 +66,9 @@ a
 	text-decoration: none
 h1, h2, h3, h4, h5, h6, b, strong
 	// font-weight: normal
-
+h2
+	font-size: 20px
+	line-height: 1.4 
 h3
 	font-size: 18px
 	color: #000 
@@ -79,10 +81,32 @@ h4
 	line-height: 1.2
 	+r1
 		font-size: 14px
+h5, h6
+	font-size: 14px
+	color: #494949 
 p
 	font-size: 14px
 	color: #494949 
 	line-height: 1.2
 	+r1
 		font-size: 12px
-		
+	a
+		color: #0080ec
+		&:hover
+			text-decoration: underline 
+			
+.btn
+	display: inline-block
+	vertical-align: top
+	font-size: 18px
+	color: #47c2c7
+	padding: 8px 14px 7px
+	border: 1px solid #47c2c7
+	+border-radius(10px)  
+	+transition(color 0.3s, background 0.3s)
+	position: relative
+	&:hover
+		color: #fff
+		background: #47c2c7
+	&:active
+		top: 1px

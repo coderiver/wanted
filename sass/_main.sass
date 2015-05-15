@@ -68,7 +68,16 @@ body
 			+s(img-sticker)
 		img
 			width: 100%
-			
+	&__label
+		font-size: 18px
+		font-weight: bold
+		color: #000
+		margin: 7px 0 0 
+		padding: 10px 32px 5px
+		border-top: 1px solid #dadada
+		+r1
+			padding: 10px 16px 5px 
+			font-size: 16px
 .main
 	width: 66%
 	background: #fff
@@ -264,3 +273,188 @@ body
 	&__next
 		right: -15px
 		+s(arr-next)
+
+.text
+	padding: 17px 0 0 
+	h3
+		text-align: center
+		text-transform: uppercase
+		margin-bottom: 13px
+		font-size: 18px
+	p
+		margin-bottom: 5px
+		font-size: 14px
+	ul
+		padding: 13px 0 0 
+	li
+		font-size: 14px
+		color: #494949 
+		line-height: 1.2
+		padding: 0 0 0 14px
+		position: relative
+		&:before
+			content: "—" 
+			position: absolute
+			top: 0
+			left: 0
+		b
+			margin-right: 5px
+.btns
+	text-align: center
+	font-size: 0
+	padding: 11px 0 0 
+	.btn
+		margin: 0 5px 9px 
+
+.members
+	padding: 25px 0 0
+	text-align: center
+	font-size: 0
+	margin: 0 -10px 
+	+r1
+		margin: 0
+		padding: 25px 19px 0 
+	&__col
+		width: 20%
+		display: inline-block
+		vertical-align: top
+		padding-bottom: 25px 
+		+r1
+			width: 33.3%
+	&__img
+		overflow: hidden
+		+border-radius(50%)
+		width: 90px
+		height: 90px
+		margin: 0 auto 15px
+		background: url(../img/members-img.png) no-repeat
+		+cover 
+		img
+			width: 100%
+	&__name
+		color: #494949
+		font-size: 14px
+		font-weight: bold
+		display: block
+		margin-bottom: 12px
+	p
+		font-size: 12px
+		
+.themes
+	text-align: center
+	padding: 20px 0 25px
+	h3
+		text-transform: uppercase
+		margin-bottom: 15px
+		+r1
+			margin-bottom: 25px
+	&__row
+		+clr
+	&__col
+		float: left
+		width: 33.3%
+		padding: 0 10px
+		+box 
+	&__img
+		height: 100px
+		+vertical
+		margin-bottom: 12px
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		width: 80px
+		height: 80px
+		+border-radius(50%)
+		overflow: hidden
+		+vertical
+		&.is-red
+			background: #ef5350
+		&.is-purple
+			background: #ab47bc
+		&.is-blue
+			background: #5c6bc0
+		&.is-active
+			width: 100px
+			height: 100px
+		i
+			display: inline-block
+			vertical-align: middle
+			&.is-build
+				+s(build)
+			&.is-it
+				+s(it)
+			&.is-goods
+				+s(goods)
+	&__name
+		color: #494949
+		font-size: 14px
+		font-weight: bold
+		display: block
+		min-height: 40px
+		max-width: 130px
+		margin: 0 auto 10px
+	p
+		font-size: 13px
+		max-width: 182px
+		margin: 0 auto
+		+r1
+			font-size: 12px
+	.slick-prev
+		left: 0
+	.slick-next
+		right: 0
+.steps
+	text-align: center
+	padding: 0 0 21px 
+	h3
+		text-transform: uppercase
+		margin-bottom: 15px
+	&__btn
+		font-size: 0
+		.btn
+			margin: 0 5px 9px 
+			
+.info
+	padding: 18px 0  
+	li
+		font-size: 14px
+		color: #494949 
+		line-height: 1.2
+		padding: 0 0 0 14px
+		position: relative
+		&:before
+			content: "—" 
+			position: absolute
+			top: 0
+			left: 0
+		b
+			margin-right: 5px
+	p, h5, h6, ul
+		margin-bottom: 17px
+		font-size: 14px
+	h5
+		text-align: center
+
+.contacts
+	max-width: 480px
+	margin: 0 auto
+	padding: 10px 0 10px 
+	+clr
+	.map
+		+box-shadow(0 1px 3px rgba(0, 0, 0, 0.4))
+		width: 220px
+		height: 264px
+		float: left
+		margin: 0 20px 20px 0 
+		+r1
+			margin-right: 15px
+		iframe
+			display: block
+			width: 100%
+			height: 100%
+	&__info
+		overflow: hidden
+		div
+			margin-bottom: 19px
+		p
+			font-size: 14px

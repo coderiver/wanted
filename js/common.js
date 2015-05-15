@@ -17,5 +17,28 @@ head.ready(function() {
 
 	// console.log($('body').html());
 
-	$('.js-slick').slick();
+	$('.js-slick').slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 1020,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					arrows: true
+				}
+			}
+		]
+	});
+	$('.js-themes').slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+	});
 });
