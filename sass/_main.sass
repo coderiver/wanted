@@ -661,9 +661,6 @@ body
 	width: 160px
 	position: relative
 	padding: 0 0 20px 
-	&:hover
-		.rating__popup
-			display: block
 	&__number
 		text-align: center
 	&__title
@@ -673,18 +670,21 @@ body
 		color: #5c6bc0
 		font-weight: bold
 		border-bottom: 3px dashed #5c6bc0  
+		cursor: pointer
 	&__popup
 		text-align: left
 		position: absolute
 		top: 100%
 		right: 0
-		z-index: 250
+		z-index: 350
 		background: #fff
 		+box-shadow(0 2px 6px rgba(0, 0, 0, 0.4))
 		+border-radius(6px)
 		width: 240px
 		+box
 		display: none
+		&.is-active
+			display: block
 		&:before, &:after
 			content: "" 
 			position: absolute

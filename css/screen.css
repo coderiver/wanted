@@ -333,10 +333,10 @@ body { height: 100%; }
 .author__info h4 { margin-bottom: 3px; }
 
 .rating { width: 160px; position: relative; padding: 0 0 20px; }
-.rating:hover .rating__popup { display: block; }
 .rating__number { text-align: center; }
-.rating__title { display: inline-block; font-size: 58px; line-height: 1; color: #5c6bc0; font-weight: bold; border-bottom: 3px dashed #5c6bc0; }
-.rating__popup { text-align: left; position: absolute; top: 100%; right: 0; z-index: 250; background: white; -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; width: 240px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; display: none; }
+.rating__title { display: inline-block; font-size: 58px; line-height: 1; color: #5c6bc0; font-weight: bold; border-bottom: 3px dashed #5c6bc0; cursor: pointer; }
+.rating__popup { text-align: left; position: absolute; top: 100%; right: 0; z-index: 350; background: white; -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; width: 240px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; display: none; }
+.rating__popup.is-active { display: block; }
 .rating__popup:before, .rating__popup:after { content: ""; position: absolute; }
 .rating__popup:after { width: 0px; height: 0px; border-style: solid; border-width: 0 9px 9px 9px; border-color: transparent transparent white transparent; right: 70px; top: -9px; }
 .rating__popup:before { width: 8px; height: 6px; -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), inset 0 2px 6px rgba(0, 0, 0, 0.4); -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), inset 0 2px 6px rgba(0, 0, 0, 0.4); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), inset 0 2px 6px rgba(0, 0, 0, 0.4); right: 75px; top: -6px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; margin-top: -1px; }

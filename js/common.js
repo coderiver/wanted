@@ -81,4 +81,17 @@ head.ready(function() {
         return false;
         
     });
+
+    $('.js-rate').each(function() {
+    	$('.js-rate-open').on('click', function () {
+    		$(this).parents('.js-rate').find('.js-rate-popup').toggleClass('is-active');
+    		return false;
+    	});
+    	$('body').on('click', function() {
+    		$('.js-rate-popup').removeClass('is-active');
+    	});
+    	$(this).on('click', function(event) {
+    		event.stopPropagation();
+    	});
+    });
 });
