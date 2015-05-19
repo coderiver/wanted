@@ -26,6 +26,9 @@ body
 		display: inline-block
 		vertical-align: top
 		font-size: 0
+		width: 21px
+		img
+			width: 100%
 	&__social
 		float: right
 		font-size: 0
@@ -37,8 +40,12 @@ body
 				display: inline-block
 				&.is-fb
 					+s(fb)
+					+retina
+						+sr(fb-48)
 				&.is-tw
 					+s(tw)
+					+retina
+						+sr(tw-48)
 	&__link
 		display: block
 		border-bottom: 1px solid #dadada 
@@ -121,13 +128,23 @@ body
 		display: inline-block
 		vertical-align: top
 		margin: 19px 0 0
+		max-width: 300px
+		img
+			width: 100%
 	&__list
 		float: right
 		li
 			display: inline-block
 			vertical-align: top
 			margin-left: 10px
-			
+		a
+			display: block
+			img
+				width: 100%
+			&.is-gef
+				width: 54px
+			&.is-undp
+				width: 32px
 .lead
 	text-align: center
 	padding: 16px 0 15px 
@@ -216,10 +233,16 @@ body
 			vertical-align: middle
 			&.is-desk
 				+s(desk)
+				+retina
+					+sr(desk2)
 			&.is-like
 				+s(like)
+				+retina
+					+sr(like2)
 			&.is-medal
 				+s(medal)
+				+retina
+					+sr(medal2)
 	p, b
 		color: #494949
 		display: inline
@@ -367,12 +390,32 @@ body
 		+border-radius(50%)
 		overflow: hidden
 		+vertical
-		&.is-red
+		&.is-build
+			background: #e53935
+		&.is-it
+			background: #8e24aa
+		&.is-goods
+			background: #fb8c00
+		&.is-economy
 			background: #ef5350
-		&.is-purple
+		&.is-ecology
 			background: #ab47bc
-		&.is-blue
+		&.is-social
 			background: #5c6bc0
+		&.is-girl
+			background: #6d4c41
+		&.is-android
+			background: #7cb342
+		&.is-apple
+			background: #00897b
+		&.is-cup
+			background: #039be5
+		&.is-glasses
+			background: #3949ab
+		&.is-plaster
+			background: #d81b60
+		&.is-paw
+			background: #546e7a 
 		&.is-active
 			width: 100px
 			height: 100px
@@ -381,16 +424,56 @@ body
 			vertical-align: middle
 			&.is-build
 				+s(build)
+				+retina
+					+s3(build2)
 			&.is-it
 				+s(it)
+				+retina
+					+s3(it2)
 			&.is-goods
 				+s(goods)
+				+retina
+					+s3(goods2)
 			&.is-economy
 				+s(economy)
+				+retina
+					+s3(economy2)
 			&.is-ecology
 				+s(ecology)
+				+retina
+					+s3(ecology2)
 			&.is-social
 				+s(social)
+				+retina
+					+s3(social2)
+			&.is-girl
+				+s(girl)
+				+retina
+					+s3(girl2)
+			&.is-android
+				+s(android)
+				+retina
+					+s3(android2)
+			&.is-apple
+				+s(apple)
+				+retina
+					+s3(apple2)
+			&.is-cup
+				+s(cup)
+				+retina
+					+s3(cup2)
+			&.is-glasses
+				+s(glasses)
+				+retina
+					+s3(glasses2)
+			&.is-plaster
+				+s(plaster)
+				+retina
+					+s3(plaster2)
+			&.is-paw
+				+s(paw)
+				+retina
+					+s3(paw2)
 	&__name
 		color: #494949
 		font-size: 14px
@@ -495,9 +578,13 @@ body
 	&__prev
 		+s(slider-prev)
 		left: 10px
+		+retina
+			+sr(left_white)
 	&__next
 		+s(slider-next)
 		right: 10px
+		+retina
+			+sr(right_white)
 	&__item
 		font-size: 0
 		img
@@ -732,6 +819,8 @@ body
 			vertical-align: middle
 			&.is-goods
 				+s(goods)
+				+retina
+					+s3(goods2)
 	h3
 		overflow: hidden
 		padding: 10px 0 0 

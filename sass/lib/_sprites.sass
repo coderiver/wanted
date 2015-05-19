@@ -10,6 +10,9 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
 =image-sizer($path)
 	width: image-width($path) / 2
 	height: image-height($path) / 2
+=image-sizer3($path)
+	width: image-width($path) / 3
+	height: image-height($path) / 3
 
 =sized-sprite($map, $sprite)
 	background: sprite($map, $sprite) no-repeat
@@ -36,6 +39,13 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
 	background-position: 0 $ypos
 	+image-sizer(sprite-file($map, $sprite))
 	+background-size(ceil(image-width(sprite-path($map)) / 2), ceil(image-height(sprite-path($map)) / 2))
+//for retina x3
+=s3($sprite, $map: $icons)
+	background: sprite($map, $sprite) no-repeat
+	$ypos: round(nth(sprite-position($map, $sprite), 2) / 3)
+	background-position: 0 $ypos
+	+image-sizer3(sprite-file($map, $sprite))
+	+background-size(ceil(image-width(sprite-path($map)) / 3), ceil(image-height(sprite-path($map)) / 3))
 
 //only image, when dimensions are useless
 =si($sprite, $map: $icons)
