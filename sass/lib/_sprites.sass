@@ -1,6 +1,5 @@
 //	sprites with padding
-$icons: sprite-map("icons/*.png", $spacing: 25px)
-$icons3: sprite-map("icons3/*.png", $spacing: 40px)
+$icons: sprite-map("icons/*.png", $spacing: 20px)
 
 // sized sprites
 =image-size($path)
@@ -42,11 +41,16 @@ $icons3: sprite-map("icons3/*.png", $spacing: 40px)
 	+background-size(ceil(image-width(sprite-path($map)) / 2), ceil(image-height(sprite-path($map)) / 2))
 //for retina x3
 =s3($sprite, $map: $icons)
-	background: sprite($map, $sprite) no-repeat
-	$ypos: round(nth(sprite-position($map, $sprite), 2) / 3)
-	background-position: 0 $ypos
-	+image-sizer3(sprite-file($map, $sprite))
-	+background-size(ceil(image-width(sprite-path($map)) / 3), ceil(image-height(sprite-path($map)) / 3))
+	background-image: inline-image('icons/'+$sprite+'.png','image/png')
+	background-position: 0 0 
+	-webkit-background-size: contain 
+	-o-background-size: contain 
+	background-size: contain
+	// background: sprite($map, $sprite) no-repeat
+	// $ypos: round(nth(sprite-position($map, $sprite), 2) / 3)
+	// background-position: 0 $ypos
+	// +image-sizer3(sprite-file($map, $sprite))
+	// +background-size(ceil(image-width(sprite-path($map)) / 3), ceil(image-height(sprite-path($map)) / 3))
 
 //only image, when dimensions are useless
 =si($sprite, $map: $icons)

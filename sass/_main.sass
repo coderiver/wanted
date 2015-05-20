@@ -66,7 +66,7 @@ body
 			cursor: pointer
 			z-index: 100 
 			&:hover
-				background: rgba(0, 0, 0, 0.3) 
+				background: rgba(0, 0, 0, 0.1) 
 	&__social, &__inner
 		+r2
 			visibility: hidden
@@ -175,25 +175,55 @@ body
 	font-size: 0
 	text-align: center
 	border-bottom: 1px solid #dadada 
+	position: relative
 	li
 		display: inline-block
 		vertical-align: top
-		padding: 0 2px 
-		+r1
-			padding: 0 1px 
+		padding: 19px 8px 20px
+		+r(600)
+			display: none
+		&.is-active
+			+r(600)
+				display: inline-block
 	a
 		font-size: 14px
 		color: #494949
 		text-transform: uppercase
-		padding: 19px 8px 20px
 		display: block
+		position: relative
 		+r1
 			font-size: 12px
-			padding: 18px 6px 19px 
+		+r(600)
+			display: none
 		&:hover, &.is-active 
 			color: #47c2c7
 			text-decoration: underline 
-			
+			+r(600)
+				text-decoration: none
+		&.is-active
+			padding-right: 15px 
+			+r(600)
+				display: block
+			&:before
+				content: ""
+				position: absolute
+				top: 5px
+				right: 0px
+				+sr(arr-bot)
+	&__select
+		display: none
+		position: absolute
+		top: 18px
+		left: 50%
+		margin-left: -90px
+		width: 180px
+		+opacity(0)
+		cursor: pointer
+		font-size: 12px
+		color: #494949
+		text-transform: uppercase
+		+r(600)
+			display: block
 .logos
 	padding: 10px 45px
 	+clr
@@ -359,13 +389,9 @@ body
 		display: inline
 	p
 		font-size: 14px
-		+r2
-			font-size: 9px
 	b
 		font-size: 16px
 		font-weight: bold
-		+r2
-			font-size: 10px
 .banner
 	max-width: 460px
 	width: 100%
@@ -402,8 +428,6 @@ body
 		font-size: 16px
 		color: #fff
 		+text-shadow(0 1px 0 rgba(0, 0, 0, 0.5)) 
-		+r2
-			font-size: 8px
 	&__prev, &__next
 		position: absolute
 		top: 50%
@@ -461,10 +485,9 @@ body
 		margin: 0 5px 9px 
 
 .members
-	padding: 25px 0 0
+	padding: 25px 19px 0
 	text-align: center
 	font-size: 0
-	margin: 0 -10px 
 	+r1
 		margin: 0
 		padding: 25px 19px 0 
@@ -675,12 +698,16 @@ body
 		margin: 0 20px 20px 0 
 		+r1
 			margin-right: 15px
+		+r(580)
+			width: 100%
 		iframe
 			display: block
 			width: 100%
 			height: 100%
 	&__info
 		overflow: hidden
+		+r(580)
+			clear: both
 		div
 			margin-bottom: 19px
 		p
@@ -701,6 +728,10 @@ body
 		width: 100%
 		+r1
 			max-width: 310px
+		+r(560)
+			float: none
+			clear: both
+			max-width: 100%
 .slider
 	max-width: 480px
 	width: 100%
@@ -757,8 +788,12 @@ body
 	max-width: 480px
 	font-size: 0.1px
 	margin: 0 auto 20px
+	+r(570)
+		margin: 0 auto 10px
 	ul
 		text-align: justify
+		+r(570)
+			text-align: left
 		&:after
 			display: inline-block
 			width: 100%
@@ -766,6 +801,8 @@ body
 	li
 		display: inline-block
 		vertical-align: top
+		+r(570)
+			margin: 0 10px 10px 0
 	a
 		display: block
 		&.is-fb
@@ -801,6 +838,8 @@ body
 			+r1
 				text-align: justify
 				max-width: 480px
+			+r(570)
+				text-align: left
 			&:after
 				content: "" 
 				width: 100%
@@ -811,7 +850,9 @@ body
 			vertical-align: top
 			margin: 0 13px 0 0 
 			+r1
-				margin: 0 
+				margin: 0 		
+			+r(570)
+				margin: 0 10px 10px 0
 		a
 			display: block
 			&.is-fb
@@ -835,13 +876,18 @@ body
 		margin-bottom: 15px
 		display: block
 	.rating
-		float: right
+		position: absolute
+		top: 17px
+		right: 0
 	&__row
 		+clr
 		padding: 17px 0 0 
+		position: relative
 	&__box
 		overflow: hidden
-		padding: 0 0 20px 
+		padding: 0 160px 20px 0
+		+r(450)
+			padding: 0 0 20px 
 	.slider
 		margin-bottom: 17px
 	&__text
@@ -880,6 +926,9 @@ body
 		overflow: hidden	
 		padding: 3px 0 0
 		max-width: 340px
+		+r(550)
+			clear: both
+			padding: 10px 0 0 
 		h4
 			margin-bottom: 3px
 .rating

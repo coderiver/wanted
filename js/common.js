@@ -25,13 +25,26 @@ head.ready(function() {
 		slidesToScroll: 1,
 		responsive: [
 			{
-				breakpoint: 1020,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 1,
-					arrows: true
-				}
-			}
+                breakpoint: 1020,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+			},
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
 		]
 	});
 	$('.js-themes').slick({
@@ -40,7 +53,24 @@ head.ready(function() {
 		speed: 300,
 		slidesToShow: 3,
         centerMode: true,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    centerMode: false
+                }
+            },
+            {
+                breakpoint: 380,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
 	});
 
 	//select
@@ -108,5 +138,10 @@ head.ready(function() {
             event.stopPropagation();
         });
     });
-   
+   //nav
+
+    $( ".js-nav-select" ).change(function() {
+        elem = $('.js-nav-list li').eq($('.js-nav-select option:selected').index()).children('a').attr('href');
+        window.location.href = elem;
+   });
 });
