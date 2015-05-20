@@ -39,6 +39,7 @@ head.ready(function() {
 		infinite: true,
 		speed: 300,
 		slidesToShow: 3,
+        centerMode: true,
 		slidesToScroll: 1
 	});
 
@@ -94,4 +95,18 @@ head.ready(function() {
     		event.stopPropagation();
     	});
     });
+
+    //mob 
+    $('.sidebar').each(function() {
+        $('.sidebar-btn').on('click', function() {
+            $('body').addClass('is-active');
+        });
+        $('body').on('click', function() {
+            $('body').removeClass('is-active');
+        });
+        $(this).on('click', function(event) {
+            event.stopPropagation();
+        });
+    });
+   
 });
