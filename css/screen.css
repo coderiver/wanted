@@ -108,7 +108,7 @@ body.is-active .sidebar-btn { display: none; }
 body.is-active .sidebar__social, body.is-active .sidebar__inner { visibility: visible; }
 body.is-active .main { left: 197px; }
 @media only screen and (max-width: 768px) { body.is-active .overlay { display: block; } }
-@media only screen and (max-width: 768px) { body .overlay { position: fixed; top: 0; bottom: 0; right: 0; left: 0; z-index: 200; background: black; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; display: none; } }
+@media only screen and (max-width: 768px) { body .overlay { position: fixed; top: 0; bottom: 0; right: 0; left: 0; z-index: 400; background: black; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; display: none; } }
 
 .out { max-width: 1024px; min-width: 320px; width: 100%; margin: 0 auto; *zoom: 1; height: 100%; position: relative; }
 .out:after { content: " "; display: table; clear: both; }
@@ -119,7 +119,7 @@ body.is-active .main { left: 197px; }
 
 .sidebar { width: 34%; float: left; background: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 @media only screen and (max-width: 1020px) { .sidebar { width: 33.3%; } }
-@media only screen and (max-width: 768px) { .sidebar { width: 45px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s; z-index: 250; overflow: hidden; } }
+@media only screen and (max-width: 768px) { .sidebar { width: 45px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s; z-index: 500; overflow: hidden; } }
 @media only screen and (max-width: 768px) { .sidebar-btn { position: absolute; top: 0; bottom: 0; right: 0; left: 0; cursor: pointer; z-index: 100; }
   .sidebar-btn:hover { background: rgba(0, 0, 0, 0.1); } }
 @media only screen and (max-width: 768px) { .sidebar__social, .sidebar__inner { visibility: hidden; } }
