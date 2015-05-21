@@ -192,7 +192,7 @@ body
 		display: block
 		position: relative
 		+r1
-			font-size: 12px
+			font-size: 17px
 		+r(600)
 			display: none
 		&:hover, &.is-active 
@@ -207,23 +207,28 @@ body
 			&:before
 				content: ""
 				position: absolute
-				top: 5px
+				top: 9px
 				right: 0px
 				+sr(arr-bot)
 	&__select
 		display: none
 		position: absolute
-		top: 18px
-		left: 50%
-		margin-left: -90px
-		width: 180px
+		top: 10px
+		left: 0
+		right: 0
 		+opacity(0)
 		cursor: pointer
 		font-size: 12px
 		color: #494949
 		text-transform: uppercase
+		padding: 10px
+		+box 
+		width: 100%
 		+r(600)
 			display: block
+	&__inner
+		display: inline-block
+		position: relative
 .logos
 	padding: 10px 45px
 	+clr

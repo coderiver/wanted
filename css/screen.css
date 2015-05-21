@@ -162,15 +162,16 @@ body.is-active .main { left: 197px; }
 @media only screen and (max-width: 600px) { .nav li { display: none; } }
 @media only screen and (max-width: 600px) { .nav li.is-active { display: inline-block; } }
 .nav a { font-size: 14px; color: #494949; text-transform: uppercase; display: block; position: relative; }
-@media only screen and (max-width: 1020px) { .nav a { font-size: 12px; } }
+@media only screen and (max-width: 1020px) { .nav a { font-size: 17px; } }
 @media only screen and (max-width: 600px) { .nav a { display: none; } }
 .nav a:hover, .nav a.is-active { color: #47c2c7; text-decoration: underline; }
 @media only screen and (max-width: 600px) { .nav a:hover, .nav a.is-active { text-decoration: none; } }
 .nav a.is-active { padding-right: 15px; }
 @media only screen and (max-width: 600px) { .nav a.is-active { display: block; } }
-.nav a.is-active:before { content: ""; position: absolute; top: 5px; right: 0px; background: url('../img/icons-s18d4bdb153.png') 0 -361px no-repeat; background-position: 0 -181px; width: 6.5px; height: 5px; -moz-background-size: 181px, 2260px; -o-background-size: 181px, 2260px; -webkit-background-size: 181px, 2260px; background-size: 181px, 2260px; }
-.nav__select { display: none; position: absolute; top: 18px; left: 50%; margin-left: -90px; width: 180px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; cursor: pointer; font-size: 12px; color: #494949; text-transform: uppercase; }
+.nav a.is-active:before { content: ""; position: absolute; top: 9px; right: 0px; background: url('../img/icons-s18d4bdb153.png') 0 -361px no-repeat; background-position: 0 -181px; width: 6.5px; height: 5px; -moz-background-size: 181px, 2260px; -o-background-size: 181px, 2260px; -webkit-background-size: 181px, 2260px; background-size: 181px, 2260px; }
+.nav__select { display: none; position: absolute; top: 10px; left: 0; right: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; cursor: pointer; font-size: 12px; color: #494949; text-transform: uppercase; padding: 10px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; }
 @media only screen and (max-width: 600px) { .nav__select { display: block; } }
+.nav__inner { display: inline-block; position: relative; }
 
 .logos { padding: 10px 45px; *zoom: 1; font-size: 0; border-bottom: 1px solid #dadada; text-align: right; }
 .logos:after { content: " "; display: table; clear: both; }
