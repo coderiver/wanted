@@ -138,6 +138,9 @@ head.ready(function() {
             event.stopPropagation();
         });
     });
+    $('.overlay').on('click', function() {
+        $('.sidebar').removeClass('is-active');
+    });
    //nav
 
     $( ".js-nav-select" ).change(function() {
