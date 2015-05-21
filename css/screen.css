@@ -159,7 +159,7 @@ body.is-active .main { left: 197px; }
 
 .nav { font-size: 0; text-align: center; border-bottom: 1px solid #dadada; position: relative; }
 .nav li { display: inline-block; vertical-align: top; padding: 19px 8px 20px; }
-@media only screen and (max-width: 800px) { .nav li { display: none; } }
+@media only screen and (max-width: 800px) { .nav li { display: none; padding: 19px 6px 20px; } }
 @media only screen and (max-width: 768px) { .nav li { display: inline-block; } }
 @media only screen and (max-width: 550px) { .nav li { display: none; } }
 @media only screen and (max-width: 800px) { .nav li.is-active { display: inline-block; } }
