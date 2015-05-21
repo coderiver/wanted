@@ -182,8 +182,14 @@ body
 		padding: 19px 8px 20px
 		+r(800)
 			display: none
+		+r(768)
+			display: inline-block
+		+r(550)
+			display: none
 		&.is-active
 			+r(800)
+				display: inline-block
+			+r(550)
 				display: inline-block
 	a
 		font-size: 14px
@@ -194,16 +200,29 @@ body
 		+r1
 			font-size: 12px
 		+r(800)
-			display: none
+			font-size: 17px
+		+r(768)
+			display: block
+			font-size: 14px
+		+r(630)
+			font-size: 12px
+		+r(550)
 			font-size: 17px
 		&:hover, &.is-active 
 			color: #47c2c7
 			text-decoration: underline 
 			+r(800)
 				text-decoration: none
+			+r(768)
+				text-decoration: underline
+			+r(550)
+				text-decoration: none
 		&.is-active
 			+r(800)
-				display: block
+				padding-right: 15px 
+			+r(768)
+				padding-right: 0
+			+r(550)
 				padding-right: 15px 
 			&:before
 				content: ""
@@ -213,6 +232,10 @@ body
 				+sr(arr-bot)
 				display: none
 				+r(800)
+					display: block
+				+r(768)
+					display: none
+				+r(550)
 					display: block
 	&__select
 		display: none
@@ -230,9 +253,20 @@ body
 		width: 100%
 		+r(800)
 			display: block
+		+r(768)
+			display: none
+		+r(550)
+			display: block
 	&__inner
 		display: inline-block
 		position: relative
+		+r(800)
+			max-width: 300px
+			width: 100%
+		+r(768)
+			max-width: 100%
+		+r(550)
+			max-width: 300px
 .logos
 	padding: 10px 45px
 	+clr
