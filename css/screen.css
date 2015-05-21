@@ -170,8 +170,6 @@ body.is-active .main { left: 197px; }
 @media only screen and (max-width: 630px) { .nav a { font-size: 12px; } }
 @media only screen and (max-width: 550px) { .nav a { font-size: 17px; } }
 .nav a:hover, .nav a.is-active { color: #47c2c7; text-decoration: underline; }
-@media only screen and (max-width: 800px) { .nav a:hover, .nav a.is-active { text-decoration: none; } }
-@media only screen and (max-width: 768px) { .nav a:hover, .nav a.is-active { text-decoration: underline; } }
 @media only screen and (max-width: 550px) { .nav a:hover, .nav a.is-active { text-decoration: none; } }
 @media only screen and (max-width: 768px) { .nav a.is-active { padding-right: 0; } }
 @media only screen and (max-width: 550px) { .nav a.is-active { padding-right: 15px; } }
