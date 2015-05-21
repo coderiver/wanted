@@ -180,10 +180,10 @@ body
 		display: inline-block
 		vertical-align: top
 		padding: 19px 8px 20px
-		+r(600)
+		+r(800)
 			display: none
 		&.is-active
-			+r(600)
+			+r(800)
 				display: inline-block
 	a
 		font-size: 14px
@@ -192,24 +192,28 @@ body
 		display: block
 		position: relative
 		+r1
-			font-size: 17px
-		+r(600)
+			font-size: 12px
+		+r(800)
 			display: none
+			font-size: 17px
 		&:hover, &.is-active 
 			color: #47c2c7
 			text-decoration: underline 
-			+r(600)
+			+r(800)
 				text-decoration: none
 		&.is-active
-			padding-right: 15px 
-			+r(600)
+			+r(800)
 				display: block
+				padding-right: 15px 
 			&:before
 				content: ""
 				position: absolute
 				top: 9px
 				right: 0px
 				+sr(arr-bot)
+				display: none
+				+r(800)
+					display: block
 	&__select
 		display: none
 		position: absolute
@@ -218,13 +222,13 @@ body
 		right: 0
 		+opacity(0)
 		cursor: pointer
-		font-size: 12px
+		font-size: 12px*1.3
 		color: #494949
 		text-transform: uppercase
 		padding: 10px
 		+box 
 		width: 100%
-		+r(600)
+		+r(800)
 			display: block
 	&__inner
 		display: inline-block
